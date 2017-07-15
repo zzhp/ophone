@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>笔记</title>
+</head>
+<body>
+
+标注工具：PXcook
+用BEM的思想去布局
+
+text-indent: 50px;距离左边50px
+
+a href="javascript:;"这个的意思是表明点击不回触发任何事件
+
+一些垂直居中的方法：
+ height: 38px;
+line-height: 38px;
+
+块元素垂直居中与父元素
+.header_wrap{
+    height:80px;
+    position:relative;
+    <!-- 将父元素设置为相对定位 -->
+}
+.header_logo{
+    height:38px;
+    position；absolute;
+    <!-- 子元素设置为绝对定位 -->
+    top:50%;
+    margin-top:-19px;
+    <!-- 将margin-top设置为高度的一半 --> 
+}
+
+水平居中
+.header_wrap{
+    margin:0 auto;
+}
+
+
+块元素的水平居中{
+    margin: 0 auto;
+    //width:100px;
+        left:50%;
+        margin-left:-50px;
+}
+
+背景图覆盖：background-size:cover
+
+开发技巧：测试模式
+
+
+JS技巧：
+1.两种遍历，遍历对象{}，遍历数组[]
+for(k in s){
+    s(k);
+}
+
+for(var i=0;i<a.length;i++){
+    document.querySelector(a[i]);
+}
+
+2.获取元素
+querySelector(a[i])
+返回的是一个元素 
+
+3.字符串截取 substr(a)  a是要截取掉的第几个数字，从1开始
+  字符串替换 replace('a','b')  用b来替换a  
+
+  一个元素既有left 又有right一定是left生效
+
+  获取样式：element.getAttribute('class',cls);
+  设置样式：element.setAttribute('class',cls)
+
+
+  最后的BUG总结：
+  在初始化所有的样式为init的时候，会有一个小的动画影响美观
+  这个时候只要将初始化的函数放在window.onload函数外面就好了
+
+  关于光标无法正确的移动到初始位置
+  可以将onmouseout 然后将left回归到原来的位置（有待改进）
+
+</body>
+</html>
